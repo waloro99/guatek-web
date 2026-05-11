@@ -8,6 +8,11 @@ import { siteConfig } from "@/constants/site";
 export const metadata: Metadata = {
   title: `${siteConfig.name} | Soluciones tecnológicas`,
   description: siteConfig.description,
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 /**

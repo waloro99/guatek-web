@@ -36,3 +36,82 @@ body {
   background: #2563eb;
   color: #ffffff;
 }
+
+/* =========================================================
+  Animaciones del Hero
+   ========================================================= */
+
+@keyframes floatCardOne {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes floatCardTwo {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 12px, 0);
+  }
+}
+
+@keyframes floatCardThree {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+@keyframes floatCardFour {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 10px, 0);
+  }
+}
+
+.float-card-1 {
+  animation: floatCardOne 4.8s ease-in-out infinite;
+}
+
+.float-card-2 {
+  animation: floatCardTwo 5.2s ease-in-out infinite;
+}
+
+.float-card-3 {
+  animation: floatCardThree 4.6s ease-in-out infinite;
+}
+
+.float-card-4 {
+  animation: floatCardFour 5s ease-in-out infinite;
+}
+
+@keyframes radarPing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.85;
+  }
+  70% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+.radar-ping {
+  animation: radarPing 1.8s ease-out infinite;
+}

@@ -9,18 +9,18 @@ export const navigationItems = [
     },
     {
         label: "Servicios",
-        href: "#servicios",
+        href: "#en-construccion",
     },
     {
         label: "Proceso",
-        href: "#proceso",
+        href: "#en-construccion",
     },
     {
         label: "Proyectos",
-        href: "#proyectos",
+        href: "#en-construccion",
     },
     {
         label: "Contacto",
-        href: "#contacto",
+        href: "#en-construccion",
     },
 ];
