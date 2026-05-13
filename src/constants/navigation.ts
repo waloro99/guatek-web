@@ -9,11 +9,11 @@ export const navigationItems = [
     },
     {
         label: "Servicios",
-        href: "#en-construccion",
+        href: "#servicios",
     },
     {
         label: "Proceso",
-        href: "#en-construccion",
+        href: "#proceso",
     },
     {
         label: "Proyectos",

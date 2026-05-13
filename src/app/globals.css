@@ -115,3 +115,43 @@ body {
 .radar-ping {
   animation: radarPing 1.8s ease-out infinite;
 }
+
+/* =========================================================
+   Animación de flujo del proceso
+   ========================================================= */
+
+@keyframes processPulse {
+  0% {
+    stroke-dashoffset: 760;
+    opacity: 0.25;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.85;
+  }
+}
+
+.process-pulse-path {
+  stroke-dasharray: 760;
+  stroke-dashoffset: 760;
+  animation: processPulse 4.5s ease-in-out infinite;
+}
+
+@keyframes processArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+.process-arrow {
+  animation: processArrow 1.4s ease-in-out infinite;
+}
