@@ -155,3 +155,260 @@ body {
 .process-arrow {
   animation: processArrow 1.4s ease-in-out infinite;
 }
+
+/* =========================================================
+   Interacción avanzada de proyectos
+   ========================================================= */
+
+.projects-grid {
+  align-items: stretch;
+}
+
+.project-card {
+  animation: projectFloat 5.5s ease-in-out infinite;
+  transition:
+    transform 0.45s ease,
+    opacity 0.45s ease,
+    filter 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+  transform-origin: center center;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes projectFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -8px;
+  }
+}
+
+.projects-grid:hover .project-card {
+  animation-play-state: paused;
+  transform: scale(0.94);
+  opacity: 0.55;
+  filter: blur(0.3px) saturate(0.9);
+}
+
+.projects-grid:hover .project-card:hover {
+  transform: scale(1.05) translateY(-10px);
+  opacity: 1;
+  filter: none;
+  z-index: 20;
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 24px 60px rgba(37, 99, 235, 0.18);
+}
+
+/* =========================================================
+   Línea animada recorriendo el borde de la card
+   ========================================================= */
+
+.project-border-line {
+  position: absolute;
+  display: block;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  opacity: 0;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.project-border-top {
+  top: 0;
+  left: 24px;
+  height: 2px;
+  width: calc(100% - 48px);
+  border-radius: 999px;
+}
+
+.project-border-right {
+  top: 24px;
+  right: 0;
+  width: 2px;
+  height: calc(100% - 48px);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #2563eb, #7c3aed);
+}
+
+.project-border-bottom {
+  bottom: 0;
+  right: 24px;
+  height: 2px;
+  width: calc(100% - 48px);
+  border-radius: 999px;
+  background: linear-gradient(270deg, #2563eb, #7c3aed);
+}
+
+.project-border-left {
+  bottom: 24px;
+  left: 0;
+  width: 2px;
+  height: calc(100% - 48px);
+  border-radius: 999px;
+  background: linear-gradient(0deg, #2563eb, #7c3aed);
+}
+
+.projects-grid:hover .project-card .project-border-line {
+  opacity: 0;
+}
+
+.projects-grid:hover .project-card:hover .project-border-line {
+  opacity: 1;
+}
+
+.projects-grid:hover .project-card:hover .project-border-top {
+  animation: borderTopRun 1.2s linear infinite;
+}
+
+.projects-grid:hover .project-card:hover .project-border-right {
+  animation: borderRightRun 1.2s linear infinite;
+  animation-delay: 0.3s;
+}
+
+.projects-grid:hover .project-card:hover .project-border-bottom {
+  animation: borderBottomRun 1.2s linear infinite;
+  animation-delay: 0.6s;
+}
+
+.projects-grid:hover .project-card:hover .project-border-left {
+  animation: borderLeftRun 1.2s linear infinite;
+  animation-delay: 0.9s;
+}
+
+@keyframes borderTopRun {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50.01% {
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+@keyframes borderRightRun {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  50.01% {
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+@keyframes borderBottomRun {
+  0% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  50.01% {
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}
+
+@keyframes borderLeftRun {
+  0% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  50.01% {
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+}
+
+/* =========================================================
+   Animación de dashboard
+   ========================================================= */
+
+@keyframes dashboardBarPulse {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(0.88);
+  }
+}
+
+.dashboard-card:hover .dashboard-bar {
+  animation: dashboardBarPulse 1.2s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+.dashboard-card:hover .dashboard-bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.dashboard-card:hover .dashboard-bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.dashboard-card:hover .dashboard-bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.dashboard-card:hover .dashboard-bar:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.dashboard-card:hover .dashboard-bar:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.dashboard-card:hover .dashboard-bar:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.dashboard-card:hover .dashboard-bar:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.dashboard-card:hover .dashboard-bar:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+.dashboard-card:hover .dashboard-bar:nth-child(10) {
+  animation-delay: 0.9s;
+}
