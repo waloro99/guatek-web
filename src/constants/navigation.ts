@@ -24,7 +24,11 @@ export const navigationItems = [
     href: "#dashboards",
   },
   {
+    label: "Sobre GuaTek",
+    href: "#sobre-guatek",
+  },
+  {
     label: "Contacto",
-    href: "#en-construccion",
+    href: "#contacto",
   },
 ];

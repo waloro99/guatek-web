@@ -3,12 +3,17 @@
  */
 
 export const siteConfig = {
-    name: "GuaTek",
-    url: "https://guatekgt.com",
-    description:
-        "Soluciones tecnológicas para empresas, negocios y marcas personales que buscan automatizar procesos, vender mejor y tomar decisiones con datos.",
-    whatsapp: "50246002405",
-    whatsappMessage:
-        "Hola GuaTek, quiero solicitar una cotización para una solución tecnológica.",
-    email: "contacto@guatekgt.com",
+  name: "GuaTek",
+  url: "https://guatekgt.com",
+  description:
+    "Soluciones tecnológicas para empresas, negocios y marcas personales que buscan automatizar procesos, vender mejor y tomar decisiones con datos.",
+  whatsapp: "50246002405",
+  whatsappMessage:
+    "Hola GuaTek, quiero solicitar una cotización para una solución tecnológica.",
+  phone: "+50246002405",
+  email: "ventas@guatekgt.com",
+  socials: {
+    facebook: "https://www.facebook.com/guatekgt",
+    instagram: "https://www.instagram.com/guatekgt/",
+  },
 };
